@@ -347,7 +347,7 @@ Functions.BorderSizePixel = 0
 Functions.Position = UDim2.new(-0.00524934381, 0, 0.456521749, 0)
 Functions.Size = UDim2.new(0, 56, 0, 15)
 Functions.Font = Enum.Font.SourceSans
-Functions.Text = "FunÁıes"
+Functions.Text = "Fun√ß√µes"
 Functions.TextColor3 = Color3.fromRGB(255, 255, 255)
 Functions.TextSize = 14.000
 
@@ -2153,19 +2153,19 @@ local function HLRHO_fake_script() -- Movementframe.swim
 	
 	function toggleSwimming()
 		if swimming then
-			unswim() -- Chame a funÁ„o unswim se estiver nadando
+			unswim() -- Chame a fun√ß√£o unswim se estiver nadando
 		else
-			swim()  -- Chame a funÁ„o swim se n„o estiver nadando
+			swim()  -- Chame a fun√ß√£o swim se n√£o estiver nadando
 		end
 	end
 	
 	swimbtn.MouseButton1Click:Connect(function()
 		if swimming then
-			unswim() -- Chame a funÁ„o unswim se estiver nadando
+			unswim() -- Chame a fun√ß√£o unswim se estiver nadando
 			swimbtn.TextColor3 = Color3.new(255/255, 255/255, 255/255)
 		else
 			swimbtn.TextColor3 = Color3.new(0, 1, 0)
-			swim()  -- Chame a funÁ„o swim se n„o estiver nadando
+			swim()  -- Chame a fun√ß√£o swim se n√£o estiver nadando
 		end
 	end)
 end
