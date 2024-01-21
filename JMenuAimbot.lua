@@ -27,7 +27,6 @@ local Vcheck = Instance.new("TextButton")
 --Properties:
 
 Aimbotframe.Name = "Aimbotframe"
-Aimbotframe.Parent = game.StarterGui.ScreenGui.Menu.Self.SelfFrame
 Aimbotframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Aimbotframe.BackgroundTransparency = 0.500
 Aimbotframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
@@ -461,7 +460,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
 	
-				-- Ajuste a posição do círculo
+				-- Ajuste a posiÃ§Ã£o do cÃ­rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.raio = math.round(percentage * 300)
 				_G.CircleSize = UDim2.new(0, _G.raio * 2, 0, _G.raio * 2)
@@ -517,7 +516,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
 	
-				-- Ajusta a posição do slider
+				-- Ajusta a posiÃ§Ã£o do slider
 				local minValue = 0
 				local maxValue = 1
 				local step = 0.1
@@ -565,7 +564,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 				local mouseLoc = UIS:GetMouseLocation()
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
-				-- Ajuste a posição do círculo
+				-- Ajuste a posiÃ§Ã£o do cÃ­rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.Parte = math.round(percentage * 2)
 				if _G.Parte == 0 then
@@ -680,11 +679,11 @@ local function INQILOI_fake_script() -- Aimbotframe.Fov
 	local UserInputService = game:GetService("UserInputService")
 	local playerGui = player.PlayerGui
 	
-	-- Tamanho do círculo
+	-- Tamanho do cÃ­rculo
 	local originalFrame = playerGui.ScreenGui.Menu:WaitForChild("fovdraw")
 	originalFrame.Parent = playerGui.ScreenGui
 	
-	-- Criar um Frame para representar o círculo
+	-- Criar um Frame para representar o cÃ­rculo
 	local circulo = playerGui.ScreenGui.fovdraw
 	circulo.BackgroundTransparency = 0.7
 	circulo.Visible = false
