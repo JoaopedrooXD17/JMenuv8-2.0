@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local Aimbotframe = Instance.new("Frame")
+local AimbotFrame = Instance.new("Frame")
 local agraim = Instance.new("TextButton")
 local Triggerbtn = Instance.new("TextButton")
 local SliderFov = Instance.new("Frame")
@@ -26,16 +26,17 @@ local Vcheck = Instance.new("TextButton")
 
 --Properties:
 
-Aimbotframe.Name = "Aimbotframe"
-Aimbotframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Aimbotframe.BackgroundTransparency = 0.500
-Aimbotframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Aimbotframe.BorderSizePixel = 3
-Aimbotframe.Position = UDim2.new(1.58530152, 0, -0.286721021, 0)
-Aimbotframe.Size = UDim2.new(0, 199, 0, 243)
+AimbotFrame.Name = "AimbotFrame"
+AimbotFrame.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AimbotFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AimbotFrame.BackgroundTransparency = 0.5
+AimbotFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+AimbotFrame.BorderSizePixel = 3
+AimbotFrame.Position = UDim2.new(0.5, -100, 0.5, -121)
+AimbotFrame.Size = UDim2.new(0, 200, 0, 242)
 
 agraim.Name = "agraim"
-agraim.Parent = Aimbotframe
+agraim.Parent = AimbotFrame
 agraim.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 agraim.BackgroundTransparency = 1.000
 agraim.BorderColor3 = Color3.fromRGB(0, 0, 0)
