@@ -27,7 +27,7 @@ local Vcheck = Instance.new("TextButton")
 --Properties:
 
 AimbotFrame.Name = "AimbotFrame"
-AimbotFrame.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AimbotFrame.Parent = game.CoreGui.LibName
 AimbotFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 AimbotFrame.BackgroundTransparency = 0.5
 AimbotFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
