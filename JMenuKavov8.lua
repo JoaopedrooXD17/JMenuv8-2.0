@@ -1,12 +1,22 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+--local AIMBOTJMENU = loadstring(game:HttpGet("https://raw.githubusercontent.com/JoaopedrooXD17/JMenuv8-2.0/main/JMenuAimbot.lua"))()
+--THEME
+--uptodate2
 local Window = Library.CreateLib("JMenu V8🚀​", "GrapeTheme")
+--TABSs
 local SelfTab = Window:NewTab("Self")
-local ScriptsTab = Window:NewTab("Scripts")
 local OnlineTab = Window:NewTab("Online")
+local ScriptsTab = Window:NewTab("Scripts")
 local VeiculosTab = Window:NewTab("Veiculos")
 local TriggersTab = Window:NewTab("Triggers")
 local ConfigTab = Window:NewTab("Config")
 
+-----------------SELF
+-----------------SELF
+-----------------SELF
+-----------------SELF
+-----------------SELF
+-----------------SELF
 local SelfSection = SelfTab:NewSection("Movements")
 SelfSection:NewSlider("Walkspeed", "noInfo", 99999999999999999, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
@@ -82,20 +92,57 @@ SelfSection:NewToggle("NCFly", "noInfo", function(state)
     end
 end)
 
+
 while true do
-	local Delta = OnRender:Wait()
-	if Nav.Flying then
-		if Nav.Forward then
-			Root.CFrame = Root.CFrame + (Camera.CFrame.LookVector * (Delta * _G.FlySpeed))
-		end
-		if Nav.Backward then
-			Root.CFrame = Root.CFrame + (-Camera.CFrame.LookVector * (Delta * _G.FlySpeed))
-		end
-		if Nav.Left then
-			Root.CFrame = Root.CFrame + (-Camera.CFrame.RightVector * (Delta * _G.FlySpeed))
-		end
-		if Nav.Right then
-			Root.CFrame = Root.CFrame + (Camera.CFrame.RightVector * (Delta * _G.FlySpeed))
-		end
-	end
+    local Delta = OnRender:Wait()
+     if Nav.Flying then
+        if Nav.Forward then
+            Root.CFrame = Root.CFrame + (Camera.CFrame.LookVector * (Delta * _G.FlySpeed))
+         end
+          if Nav.Backward then
+             Root.CFrame = Root.CFrame + (-Camera.CFrame.LookVector * (Delta * _G.FlySpeed))
+          end
+           if Nav.Left then
+             Root.CFrame = Root.CFrame + (-Camera.CFrame.RightVector * (Delta * _G.FlySpeed))
+          end
+          if Nav.Right then
+              Root.CFrame = Root.CFrame + (Camera.CFrame.RightVector * (Delta * _G.FlySpeed))
+            end
+     end
+    print("Loop executando")
 end
+-----------------ONLINE
+-----------------ONLINE
+-----------------ONLINE
+-----------------ONLINE
+-----------------ONLINE
+
+-----------------SCRIPTS
+-----------------SCRIPTS
+-----------------SCRIPTS
+-----------------SCRIPTS
+-----------------SCRIPTS
+
+-----------------VEICULOS
+-----------------VEICULOS
+-----------------VEICULOS
+-----------------VEICULOS
+-----------------VEICULOS
+local VeiculosSection = VeiculosTab:NewSection("Section Name")
+VeiculosSection:NewButton("teste", "noInfo", function() -- 500 (MaxValue) | 0 (MinValue)
+    print(script.Parent)
+end)
+
+VeiculosSection:NewButton("teste2", "noInfo", function() -- 500 (MaxValue) | 0 (MinValue)
+    print(game.CoreGui[LibName])
+end)
+
+VeiculosSection:NewButton("ButtonText", "ButtonInfo", function()
+    print(LibName)
+end)
+
+-----------------CONFIG
+-----------------CONFIG
+-----------------CONFIG
+-----------------CONFIG
+-----------------CONFIG
