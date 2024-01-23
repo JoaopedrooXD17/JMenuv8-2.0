@@ -602,6 +602,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 	end)
 end
 coroutine.wrap(JWHIXXZ_fake_script)()
+
 local function XQPEADZ_fake_script() -- Aimbotframe.TriggerMain 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
@@ -621,20 +622,22 @@ local function XQPEADZ_fake_script() -- Aimbotframe.TriggerMain
 		end
 	end)
 	
-	
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if triggertoggle == true then
-		if mouse.Target.Parent:FindFirstChild("Humanoid") and mouse.Target.Parent.Name ~= player.Name then
-				Button1Down() wait() mouse1release()
+			if mouse.Target and mouse.Target.Parent and mouse.Target.Parent:FindFirstChild("Humanoid") and mouse.Target.Parent.Name ~= player.Name then
+				mouse1click()  -- Adicionado para corrigir o erro
+				wait() 
+				mouse1release()
 			end
 		end
 	end)
 end
+
 coroutine.wrap(XQPEADZ_fake_script)()
+
 local function MIUI_fake_script() -- Aimbotframe.Drag 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
-	
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
@@ -669,9 +672,10 @@ local function MIUI_fake_script() -- Aimbotframe.Drag
 			end
 		end
 	end)
-	
 end
+
 coroutine.wrap(MIUI_fake_script)()
+
 local function INQILOI_fake_script() -- Aimbotframe.Fov 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
@@ -702,6 +706,6 @@ local function INQILOI_fake_script() -- Aimbotframe.Fov
 			fovbtn.TextColor3 = Color3.new(1, 0, 0.0156863)
 		end
 	end)
-	
 end
+
 coroutine.wrap(INQILOI_fake_script)()
