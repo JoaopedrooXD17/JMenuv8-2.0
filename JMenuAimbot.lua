@@ -1,6 +1,6 @@
 -- Gui to Lua
 -- Version: 3.2
-
+print("v2")
 -- Instances:
 
 local AimbotFrame = Instance.new("Frame")
