@@ -14,7 +14,7 @@ local Sctplr = Instance.new("TextLabel")
 --Properties:
 
 Jogadoresframe.Name = "Jogadoresframe"
-Jogadoresframe.Parent = game.StarterGui:WaitForChild("J17017")
+Jogadoresframe.Parent = game.StarterGui.J17017
 Jogadoresframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Jogadoresframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Jogadoresframe.BorderSizePixel = 3
