@@ -14,7 +14,7 @@ local Sctplr = Instance.new("TextLabel")
 --Properties:
 
 Jogadoresframe.Name = "Jogadoresframe"
-Jogadoresframe.Parent = game.StarterGui["J17017"]
+Jogadoresframe.Parent = game.CoreGui["J17017"]
 Jogadoresframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Jogadoresframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Jogadoresframe.BorderSizePixel = 3
@@ -36,7 +36,7 @@ UI.Parent = List
 UI.SortOrder = Enum.SortOrder.LayoutOrder
 
 Sample.Name = "Sample"
-Sample.Parent = game.StarterGui["J17017"].Jogadoresframe.Main
+Sample.Parent = game.CoreGui["J17017"].Jogadoresframe.Main
 Sample.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Sample.BackgroundTransparency = 1.000
 Sample.BorderColor3 = Color3.fromRGB(0, 0, 0)
