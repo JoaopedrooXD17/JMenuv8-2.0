@@ -1,9 +1,10 @@
 -- Gui to Lua
 -- Version: 3.2
-print("v2")
+
 -- Instances:
 
-local AimbotFrame = Instance.new("Frame")
+local _17017 = Instance.new("ScreenGui")
+local Aimbotframe = Instance.new("Frame")
 local agraim = Instance.new("TextButton")
 local Triggerbtn = Instance.new("TextButton")
 local SliderFov = Instance.new("Frame")
@@ -23,20 +24,25 @@ local ResetWalk_3 = Instance.new("TextButton")
 local Velo_3 = Instance.new("TextLabel")
 local TextLabel = Instance.new("TextLabel")
 local Vcheck = Instance.new("TextButton")
+local fovdraw = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
 
 --Properties:
 
-AimbotFrame.Name = "AimbotFrame"
-AimbotFrame.Parent = game.CoreGui:WaitForChild("17017")
-AimbotFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-AimbotFrame.BackgroundTransparency = 0.5
-AimbotFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-AimbotFrame.BorderSizePixel = 3
-AimbotFrame.Position = UDim2.new(0.5, -100, 0.5, -121)
-AimbotFrame.Size = UDim2.new(0, 200, 0, 242)
+_17017.Name = "17017"
+_17017.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+_17017.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Aimbotframe.Name = "Aimbotframe"
+Aimbotframe.Parent = _17017
+Aimbotframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Aimbotframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Aimbotframe.BorderSizePixel = 3
+Aimbotframe.Position = UDim2.new(0.420828909, 0, 0.280397028, 0)
+Aimbotframe.Size = UDim2.new(0, 199, 0, 243)
 
 agraim.Name = "agraim"
-agraim.Parent = AimbotFrame
+agraim.Parent = Aimbotframe
 agraim.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 agraim.BackgroundTransparency = 1.000
 agraim.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -223,10 +229,9 @@ Velo_3.TextSize = 14.000
 
 TextLabel.Parent = Aimbotframe
 TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BackgroundTransparency = 0.500
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(0, 200, 0, 18)
+TextLabel.BorderColor3 = Color3.fromRGB(255, 0, 4)
+TextLabel.BorderSizePixel = 2
+TextLabel.Size = UDim2.new(0, 199, 0, 18)
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Text = "Aimbot  >>"
 TextLabel.TextColor3 = Color3.fromRGB(17, 255, 0)
@@ -248,9 +253,20 @@ Vcheck.TextColor3 = Color3.fromRGB(255, 255, 255)
 Vcheck.TextSize = 14.000
 Vcheck.TextXAlignment = Enum.TextXAlignment.Left
 
+fovdraw.Name = "fovdraw"
+fovdraw.Parent = _17017
+fovdraw.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fovdraw.BackgroundTransparency = 0.700
+fovdraw.BorderColor3 = Color3.fromRGB(255, 0, 0)
+fovdraw.BorderSizePixel = 0
+fovdraw.Position = UDim2.new(0.312124848, 0, 0.597530842, 0)
+
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = fovdraw
+
 -- Scripts:
 
-local function JWHIXXZ_fake_script() -- Aimbotframe.Main 
+local function UMYZE_fake_script() -- Aimbotframe.Main 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	local Players = game:GetService("Players")
@@ -263,7 +279,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 	local agressiveaim = false
 	local agressiveaimbtn = script.Parent.agraim
 	local playerGui = game.Players.LocalPlayer.PlayerGui
-	local circulo = playerGui.ScreenGui:WaitForChild("fovdraw")
+	local circulo = playerGui:WaitForChild("17017"):WaitForChild("fovdraw")
 	local Vtoggle = false
 	local Vbtn = script.Parent.Vcheck
 	
@@ -461,7 +477,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
 	
-				-- Ajuste a posição do círculo
+				-- Ajuste a posi��o do c�rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.raio = math.round(percentage * 300)
 				_G.CircleSize = UDim2.new(0, _G.raio * 2, 0, _G.raio * 2)
@@ -517,7 +533,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
 	
-				-- Ajusta a posição do slider
+				-- Ajusta a posi��o do slider
 				local minValue = 0
 				local maxValue = 1
 				local step = 0.1
@@ -565,7 +581,7 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 				local mouseLoc = UIS:GetMouseLocation()
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
-				-- Ajuste a posição do círculo
+				-- Ajuste a posi��o do c�rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.Parte = math.round(percentage * 2)
 				if _G.Parte == 0 then
@@ -601,9 +617,8 @@ local function JWHIXXZ_fake_script() -- Aimbotframe.Main
 		end
 	end)
 end
-coroutine.wrap(JWHIXXZ_fake_script)()
-
-local function XQPEADZ_fake_script() -- Aimbotframe.TriggerMain 
+coroutine.wrap(UMYZE_fake_script)()
+local function RRMWC_fake_script() -- Aimbotframe.TriggerMain 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	local player = game.Players.LocalPlayer
@@ -622,22 +637,20 @@ local function XQPEADZ_fake_script() -- Aimbotframe.TriggerMain
 		end
 	end)
 	
+	
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if triggertoggle == true then
-			if mouse.Target and mouse.Target.Parent and mouse.Target.Parent:FindFirstChild("Humanoid") and mouse.Target.Parent.Name ~= player.Name then
-				mouse1click()  -- Adicionado para corrigir o erro
-				wait() 
-				mouse1release()
+		if mouse.Target.Parent:FindFirstChild("Humanoid") and mouse.Target.Parent.Name ~= player.Name then
+				Button1Down() wait() mouse1release()
 			end
 		end
 	end)
 end
-
-coroutine.wrap(XQPEADZ_fake_script)()
-
-local function MIUI_fake_script() -- Aimbotframe.Drag 
+coroutine.wrap(RRMWC_fake_script)()
+local function XLNWZ_fake_script() -- Aimbotframe.Drag 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
+	
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
@@ -672,11 +685,10 @@ local function MIUI_fake_script() -- Aimbotframe.Drag
 			end
 		end
 	end)
+	
 end
-
-coroutine.wrap(MIUI_fake_script)()
-
-local function INQILOI_fake_script() -- Aimbotframe.Fov 
+coroutine.wrap(XLNWZ_fake_script)()
+local function JXBVOFI_fake_script() -- Aimbotframe.Fov 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	local Players = game:GetService("Players")
@@ -684,12 +696,12 @@ local function INQILOI_fake_script() -- Aimbotframe.Fov
 	local UserInputService = game:GetService("UserInputService")
 	local playerGui = player.PlayerGui
 	
-	-- Tamanho do círculo
-	local originalFrame = playerGui.ScreenGui.Menu:WaitForChild("fovdraw")
-	originalFrame.Parent = playerGui.ScreenGui
+	-- Tamanho do c�rculo
+	local originalFrame = playerGui:WaitForChild("17017"):WaitForChild("fovdraw")
+	originalFrame.Parent = playerGui:WaitForChild("17017")
 	
-	-- Criar um Frame para representar o círculo
-	local circulo = playerGui.ScreenGui.fovdraw
+	-- Criar um Frame para representar o c�rculo
+	local circulo = playerGui:WaitForChild("17017"):WaitForChild("fovdraw")
 	circulo.BackgroundTransparency = 0.7
 	circulo.Visible = false
 	
@@ -706,6 +718,6 @@ local function INQILOI_fake_script() -- Aimbotframe.Fov
 			fovbtn.TextColor3 = Color3.new(1, 0, 0.0156863)
 		end
 	end)
+	
 end
-
-coroutine.wrap(INQILOI_fake_script)()
+coroutine.wrap(JXBVOFI_fake_script)()
