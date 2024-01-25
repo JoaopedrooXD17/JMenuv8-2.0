@@ -27,13 +27,8 @@ local fovdraw = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 
 --Properties:
-
-J17017.Name = "J17017"
-J17017.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-J17017.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 Aimbotframe.Name = "Aimbotframe"
-Aimbotframe.Parent = J17017
+Aimbotframe.Parent = game.CoreGui["J17017"]
 Aimbotframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Aimbotframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Aimbotframe.BorderSizePixel = 3
