@@ -3,7 +3,6 @@
 
 -- Instances:
 
-local J17017 = Instance.new("ScreenGui")
 local Aimbotframe = Instance.new("Frame")
 local agraim = Instance.new("TextButton")
 local Triggerbtn = Instance.new("TextButton")
