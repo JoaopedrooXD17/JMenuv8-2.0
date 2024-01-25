@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local _17017 = Instance.new("ScreenGui")
+local J17017 = Instance.new("ScreenGui")
 local Aimbotframe = Instance.new("Frame")
 local agraim = Instance.new("TextButton")
 local Triggerbtn = Instance.new("TextButton")
@@ -29,12 +29,12 @@ local UICorner = Instance.new("UICorner")
 
 --Properties:
 
-_17017.Name = "17017"
-_17017.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-_17017.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+J17017.Name = "J17017"
+J17017.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+J17017.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Aimbotframe.Name = "Aimbotframe"
-Aimbotframe.Parent = _17017
+Aimbotframe.Parent = J17017
 Aimbotframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Aimbotframe.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Aimbotframe.BorderSizePixel = 3
@@ -254,7 +254,7 @@ Vcheck.TextSize = 14.000
 Vcheck.TextXAlignment = Enum.TextXAlignment.Left
 
 fovdraw.Name = "fovdraw"
-fovdraw.Parent = _17017
+fovdraw.Parent = J17017
 fovdraw.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 fovdraw.BackgroundTransparency = 0.700
 fovdraw.BorderColor3 = Color3.fromRGB(255, 0, 0)
@@ -266,7 +266,7 @@ UICorner.Parent = fovdraw
 
 -- Scripts:
 
-local function UMYZE_fake_script() -- Aimbotframe.Main 
+local function VPIWUZ_fake_script() -- Aimbotframe.Main 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	local Players = game:GetService("Players")
@@ -279,7 +279,7 @@ local function UMYZE_fake_script() -- Aimbotframe.Main
 	local agressiveaim = false
 	local agressiveaimbtn = script.Parent.agraim
 	local playerGui = game.Players.LocalPlayer.PlayerGui
-	local circulo = playerGui:WaitForChild("17017"):WaitForChild("fovdraw")
+	local circulo = playerGui:WaitForChild("J17017"):WaitForChild("fovdraw")
 	local Vtoggle = false
 	local Vbtn = script.Parent.Vcheck
 	
@@ -617,8 +617,8 @@ local function UMYZE_fake_script() -- Aimbotframe.Main
 		end
 	end)
 end
-coroutine.wrap(UMYZE_fake_script)()
-local function RRMWC_fake_script() -- Aimbotframe.TriggerMain 
+coroutine.wrap(VPIWUZ_fake_script)()
+local function UNTZP_fake_script() -- Aimbotframe.TriggerMain 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	local player = game.Players.LocalPlayer
@@ -646,8 +646,8 @@ local function RRMWC_fake_script() -- Aimbotframe.TriggerMain
 		end
 	end)
 end
-coroutine.wrap(RRMWC_fake_script)()
-local function XLNWZ_fake_script() -- Aimbotframe.Drag 
+coroutine.wrap(UNTZP_fake_script)()
+local function HETQYES_fake_script() -- Aimbotframe.Drag 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	
@@ -687,8 +687,8 @@ local function XLNWZ_fake_script() -- Aimbotframe.Drag
 	end)
 	
 end
-coroutine.wrap(XLNWZ_fake_script)()
-local function JXBVOFI_fake_script() -- Aimbotframe.Fov 
+coroutine.wrap(HETQYES_fake_script)()
+local function TZKQ_fake_script() -- Aimbotframe.Fov 
 	local script = Instance.new('LocalScript', Aimbotframe)
 
 	local Players = game:GetService("Players")
@@ -697,11 +697,11 @@ local function JXBVOFI_fake_script() -- Aimbotframe.Fov
 	local playerGui = player.PlayerGui
 	
 	-- Tamanho do c�rculo
-	local originalFrame = playerGui:WaitForChild("17017"):WaitForChild("fovdraw")
-	originalFrame.Parent = playerGui:WaitForChild("17017")
+	local originalFrame = playerGui:WaitForChild("J17017"):WaitForChild("fovdraw")
+	originalFrame.Parent = playerGui:WaitForChild("J17017")
 	
 	-- Criar um Frame para representar o c�rculo
-	local circulo = playerGui:WaitForChild("17017"):WaitForChild("fovdraw")
+	local circulo = playerGui:WaitForChild("J17017"):WaitForChild("fovdraw")
 	circulo.BackgroundTransparency = 0.7
 	circulo.Visible = false
 	
@@ -720,4 +720,4 @@ local function JXBVOFI_fake_script() -- Aimbotframe.Fov
 	end)
 	
 end
-coroutine.wrap(JXBVOFI_fake_script)()
+coroutine.wrap(TZKQ_fake_script)()
