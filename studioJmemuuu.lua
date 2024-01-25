@@ -335,7 +335,7 @@ Functions.BorderSizePixel = 0
 Functions.Position = UDim2.new(-0.00524934381, 0, 0.456521749, 0)
 Functions.Size = UDim2.new(0, 56, 0, 15)
 Functions.Font = Enum.Font.SourceSans
-Functions.Text = "FunÁıes"
+Functions.Text = "Fun√ß√µes"
 Functions.TextColor3 = Color3.fromRGB(255, 255, 255)
 Functions.TextSize = 14.000
 
@@ -2208,20 +2208,20 @@ local function ZACICNZ_fake_script() -- Visualframe.LocalScript
 		return workspace:FindFirstChild(player.Name)
 	end
 	
-	-- FunÁ„o para criar destaque
+	-- Fun√ß√£o para criar destaque
 	local function createHighlight(player)
 		local character = getCharacter(player)
 		if character and not character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
 			local highlightClone = highlight:Clone()
 			highlightClone.Adornee = character:FindFirstChild("HumanoidRootPart")
 			highlightClone.Parent = character:FindFirstChild("HumanoidRootPart")
-			highlightClone.Size = Vector3.new(1, 1, 1) -- Adicionei um tamanho padr„o
+			highlightClone.Size = Vector3.new(1, 1, 1) -- Adicionei um tamanho padr√£o
 			highlightClone.AlwaysOnTop = true
 			highlightClone.Name = "Highlight"
 		end
 	end
 	
-	-- InicializaÁ„o para jogadores existentes
+	-- Inicializa√ß√£o para jogadores existentes
 	for _, player in pairs(Players) do
 		createHighlight(player)
 	end
@@ -2484,7 +2484,7 @@ local function AUOEYBW_fake_script() -- Aimbotframe.Main
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
 	
-				-- Ajuste a posiÁ„o do cÌrculo
+				-- Ajuste a posi√ß√£o do c√≠rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.raio = math.round(percentage * 300)
 				_G.CircleSize = UDim2.new(0, _G.raio * 2, 0, _G.raio * 2)
@@ -2540,7 +2540,7 @@ local function AUOEYBW_fake_script() -- Aimbotframe.Main
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
 	
-				-- Ajusta a posiÁ„o do slider
+				-- Ajusta a posi√ß√£o do slider
 				local minValue = 0
 				local maxValue = 1
 				local step = 0.1
@@ -2588,7 +2588,7 @@ local function AUOEYBW_fake_script() -- Aimbotframe.Main
 				local mouseLoc = UIS:GetMouseLocation()
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
-				-- Ajuste a posiÁ„o do cÌrculo
+				-- Ajuste a posi√ß√£o do c√≠rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.Parte = math.round(percentage * 2)
 				if _G.Parte == 0 then
@@ -2703,11 +2703,11 @@ local function BHCEAT_fake_script() -- Aimbotframe.Fov
 	local UserInputService = game:GetService("UserInputService")
 	local playerGui = player.PlayerGui
 	
-	-- Tamanho do cÌrculo
+	-- Tamanho do c√≠rculo
 	local originalFrame = playerGui.ScreenGui.Menu:WaitForChild("fovdraw")
 	originalFrame.Parent = playerGui.ScreenGui
 	
-	-- Criar um Frame para representar o cÌrculo
+	-- Criar um Frame para representar o c√≠rculo
 	local circulo = playerGui.ScreenGui.fovdraw
 	circulo.BackgroundTransparency = 0.7
 	circulo.Visible = false
@@ -2868,19 +2868,19 @@ local function FALOJK_fake_script() -- Movementframe.swim
 	
 	function toggleSwimming()
 		if swimming then
-			unswim() -- Chame a funÁ„o unswim se estiver nadando
+			unswim() -- Chame a fun√ß√£o unswim se estiver nadando
 		else
-			swim()  -- Chame a funÁ„o swim se n„o estiver nadando
+			swim()  -- Chame a fun√ß√£o swim se n√£o estiver nadando
 		end
 	end
 	
 	swimbtn.MouseButton1Click:Connect(function()
 		if swimming then
-			unswim() -- Chame a funÁ„o unswim se estiver nadando
+			unswim() -- Chame a fun√ß√£o unswim se estiver nadando
 			swimbtn.TextColor3 = Color3.new(255/255, 255/255, 255/255)
 		else
 			swimbtn.TextColor3 = Color3.new(0, 1, 0)
-			swim()  -- Chame a funÁ„o swim se n„o estiver nadando
+			swim()  -- Chame a fun√ß√£o swim se n√£o estiver nadando
 		end
 	end)
 end
@@ -3299,12 +3299,12 @@ local function ZOPNDLE_fake_script() -- ConfigFrame.LocalScript
 	local function setColorForObjects()
 		for _, obj in pairs(mastermenu:GetDescendants()) do
 			if obj:IsA("Frame") and _G.literalparte == "BackgroundColor3" then
-				-- Se o objeto È um Frame, define BackgroundColor3 e BorderColor3
+				-- Se o objeto √© um Frame, define BackgroundColor3 e BorderColor3
 				mastermenu.BackgroundColor3 = Color3.new(_G.Red / 255, _G.Green / 255, _G.Blue / 255)
 				minimize.BackgroundColor3 = Color3.new(_G.Red / 255, _G.Green / 255, _G.Blue / 255)
 				obj.BackgroundColor3 = Color3.new(_G.Red / 255, _G.Green / 255, _G.Blue / 255)
 			elseif obj:IsA("Frame") and _G.literalparte == "BorderColor3" then
-				-- Se o objeto È um TextLabel, define TextColor3
+				-- Se o objeto √© um TextLabel, define TextColor3
 				obj.BorderColor3 = Color3.new(_G.Red / 255, _G.Green / 255, _G.Blue / 255)
 				minimize.BorderColor3 = Color3.new(_G.Red / 255, _G.Green / 255, _G.Blue / 255)
 				mastermenu.BorderColor3 = Color3.new(_G.Red / 255, _G.Green / 255, _G.Blue / 255)
@@ -3465,7 +3465,7 @@ local function ZOPNDLE_fake_script() -- ConfigFrame.LocalScript
 				local mouseLoc = UIS:GetMouseLocation()
 				local relativePos = mouseLoc - settingsframe.AbsolutePosition
 				local percentage = math.clamp(relativePos.X / settingsframe.AbsoluteSize.X, 0, 1)
-				-- Ajuste a posiÁ„o do cÌrculo
+				-- Ajuste a posi√ß√£o do c√≠rculo
 				WSpeedBtn.Position = UDim2.new(percentage, 0, 0, 0)
 				_G.Parte = math.round(percentage * 2)
 				if _G.Parte == 0 then
