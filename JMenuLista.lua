@@ -99,7 +99,7 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 	local Seguir = false
 	--local spec = script.Parent.Parent.Freecam
 	local spectg = false
-	local plg = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	local plg = game.CoreGui:WaitForChild("J17017")
 	
 	--spec
 	--spec.MouseButton1Click:Connect(function()
@@ -222,8 +222,8 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 					clearuser()
 					print(nome)
 					wait(.5)
-					plg.J17017.JogadoresFrame.Sctplr.Text = nome
-					print(plg.J17017.JogadoresFrame.Sctplr.Text)
+					plg.JogadoresFrame.Sctplr.Text = nome
+					print(plg.JogadoresFrame.Sctplr.Text)
 					botaoJogador.TextColor3 = Color3.new(1, 0, 0.0156863)
 				end)
 			end
@@ -236,7 +236,7 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 		clearList()
 		H()
 		nome = ""
-		plg.J17017.JogadoresFrame.Sctplr.Text = ""
+		plg.JogadoresFrame.Sctplr.Text = ""
 		wait(1)
 		fillList()
 		clearuser()
