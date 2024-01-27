@@ -130,6 +130,7 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 				botaoJogador.Parent = plrList
 				table.insert(listaDeJogadores, botaoJogador)
 				clearuser()
+				
 				botaoJogador.MouseButton1Click:Connect(function()
 					nome = player.Name
 					whiteList()
