@@ -130,7 +130,6 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 				botaoJogador.Parent = plrList
 				table.insert(listaDeJogadores, botaoJogador)
 				clearuser()
-				
 				botaoJogador.MouseButton1Click:Connect(function()
 					nome = player.Name
 					whiteList()
@@ -149,7 +148,6 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 	--resetbtn
 	resetbtn.MouseButton1Click:Connect(function()
 		clearList()
-		H()
 		nome = ""
 		plg.JogadoresFrame.Sctplr.Text = ""
 		wait(1)
