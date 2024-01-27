@@ -90,96 +90,11 @@ local function WVZEMFK_fake_script() -- Jogadoresframe.Main
 	local plrList = script.Parent.List
 	local sample = script.Sample
 	local resetbtn = script.Parent.Refresh
-	--local charcopybtn = script.Parent.Parent.CopiarRoupa
-	--local Hbtn = script.Parent.Parent.Seguir
 	local listaDeJogadores = {}
 	local nome = ""
 	local player = game.Players:FindFirstChild(nome)
 	local jogadorLocal = game.Players.LocalPlayer
-	local Seguir = false
-	--local spec = script.Parent.Parent.Freecam
-	local spectg = false
 	local plg = game.CoreGui:WaitForChild("J17017")
-	
-	--spec
-	--spec.MouseButton1Click:Connect(function()
-	--	if spectg then
-	--		spectg = false
-	--		game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
-	--		spec.TextColor3 = Color3.new(255/255, 255/255, 255/255)
-	--	else
-	--		if nome then
-	--			spectg = true
-	--			spec.TextColor3 = Color3.new(0, 1, 0)
-	--			while spectg do
-	--				if not nome.Parent or not nome.Character then
-	--					spectg = false
-	--					spec.TextColor3 = Color3.new(255/255, 255/255, 255/255)
-	--					game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
-	--					break
-	--				end
-	--				game.Workspace.CurrentCamera.CameraSubject = nome.Character
-	--				wait(0.2)
-	--			end
-	--		else
-	--			return
-	--		end
-	--	end
-	--end)
-	
-	
-	
-	--H
-	function H()
-		if Seguir then
-			Seguir = false
-			Hbtn.TextColor3 = Color3.new(255/255, 255/255, 255/255)
-		end
-	end
-	
-	--Hbtn.MouseButton1Click:Connect(function()
-	--	if Seguir then
-	--		Seguir = false
-	--		Hbtn.TextColor3 = Color3.new(255/255, 255/255, 255/255)
-	--	else
-	--		if nome then
-	--			Seguir = true
-	--			Hbtn.TextColor3 = Color3.new(0, 1, 0)
-	--			while Seguir do
-	--				if not nome.Parent or not nome.Character or jogadorLocal.health == 0 then
-	--					Seguir = false
-	--					Hbtn.TextColor3 = Color3.new(255/255, 255/255, 255/255)
-	--					break
-	--				end
-	--				game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(nome.Character.HumanoidRootPart.CFrame)
-	--				wait(0.2)
-	--			end
-	--		else
-	--			return
-	--		end
-	--	end
-	--end)
-	
-	--ccopychar
-	function onClick()
-		local morph = nome.CharacterAppearanceId
-		print(morph)
-		jogadorLocal.CharacterAppearanceId = morph
-	end
-	
-	--charcopybtn.MouseButton1Click:Connect(function()
-	--	onClick()
-	--	print(morph)
-	--end)
-	
-	
-	--TPBTN
-	--local tpbtn = script.Parent.Parent.TPPLR
-	--tpbtn.MouseButton1Click:Connect(function()
-	--	print(nome)
-	--	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = nome.Character.HumanoidRootPart.CFrame
-	--end)
-	
 	
 	function clearList()
 		for _, item in pairs(plrList:GetChildren()) do
